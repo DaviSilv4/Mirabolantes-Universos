@@ -12,5 +12,4 @@ export class PortifolioViewComponent implements OnInit {
   }
 
   ngOnInit() {}
-
 }
