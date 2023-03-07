@@ -6,6 +6,8 @@ export interface Carrossel{
   linkProject: string;
 }
 
-export interface CarrosselData{
-
+export interface Books{
+  id: string;
+  category: string;
+  name: string;
 }

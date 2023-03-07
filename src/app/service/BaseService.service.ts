@@ -11,7 +11,7 @@ export class BaseServiceService {
 
   constructor(private httpClient: HttpClient) { }
 
-  private uri = "";
+  private uri = "api/books";
 
   private httpRequest(method: string, url: string, options: any): Observable<any> {
     return this.httpClient.request(method,`${this.uri}${url}`, { ...options }).pipe(take(1));

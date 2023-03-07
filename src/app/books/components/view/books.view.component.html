@@ -1,0 +1,7 @@
+<div *ngFor="let books of books$ | async">
+  <h1>Request GET Back</h1>
+
+  <p>{{ books.id }}</p>
+  <p>{{ books.name }}</p>
+  <p>{{ books.category }}</p>
+</div>

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Books } from '../books/model/data.model';
 import { BaseServiceService } from './BaseService.service';
 
 @Injectable({
@@ -12,7 +13,7 @@ export class TestServiceService extends BaseServiceService {
     super(http);
   }
 
-  public getTest(): Observable<string> {
-    return this.get('test');
+  public getTest(): Observable<Books[]> {
+    return this.get('');
   }
 }
