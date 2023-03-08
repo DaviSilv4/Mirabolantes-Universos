@@ -14,6 +14,6 @@ export class TestServiceService extends BaseServiceService {
   }
 
   public getTest(): Observable<Books[]> {
-    return this.get('');
+    return this.get('books');
   }
 }
