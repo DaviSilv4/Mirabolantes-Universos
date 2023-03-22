@@ -1,8 +1,11 @@
+import { SharedModule } from './../../shared/shared.module';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { SharedModule } from '../shared/shared.module';
+
 import { BooksContainerComponent } from './components/container/books.container.component';
 import { BooksViewComponent } from './components/view/books.view.component';
+import { BooksFormComponent } from './form/booksForm/booksForm.component';
 
 const routes: Routes = [
   {
@@ -14,11 +17,13 @@ const routes: Routes = [
 @NgModule({
   imports: [
     SharedModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ReactiveFormsModule
   ],
   declarations: [
     BooksContainerComponent,
-    BooksViewComponent
+    BooksViewComponent,
+    BooksFormComponent
   ],
 })
 export class BooksModule { }

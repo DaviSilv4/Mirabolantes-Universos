@@ -17,19 +17,19 @@ export class BaseServiceService {
     return this.httpClient.request(method,`${this.uri}${url}`, { ...options }).pipe(take(1));
   }
 
-  post(url: string, body: any): Observable<any> {
+  protected post(url: string, body: any): Observable<any> {
     return this.httpRequest('post', url, { body: body });
   }
 
-  get(url: string, params?: any): Observable<any> {
+  protected get(url: string, params?: any): Observable<any> {
     return this.httpRequest('get', url, { params: params });
   }
 
-  put(url: string, body: any): Observable<any> {
+  private put(url: string, body: any): Observable<any> {
     return this.httpRequest('put', url, { body: body });
   }
 
-  delete(url: string): Observable<any> {
+  protected delete(url: string): Observable<any> {
     return this.httpRequest('delete', url, {});
   }
 

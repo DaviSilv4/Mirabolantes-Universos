@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { catchError, Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { Books } from '../../model/data.model';
-import { TestServiceService } from '../../../service/testService.service';
+import { BooksService } from '../../service/Books.service';
 
 @Component({
   selector: 'app-books',
@@ -12,10 +12,9 @@ import { TestServiceService } from '../../../service/testService.service';
 export class BooksViewComponent implements OnInit {
 
   books$!: Observable<Books[]>;
-  displayedColums = ['id', 'name', 'category'];
 
-  constructor(private testServiceService: TestServiceService){
-    this.books$ = testServiceService.getTest();
+  constructor(private booksService: BooksService){
+    this.books$ = booksService.getTest();
   }
 
   ngOnInit() {}

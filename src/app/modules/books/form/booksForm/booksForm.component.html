@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+  <div>
+    <label for="">Name</label>
+    <input placeholder="Nome" formControlName="name">
+  </div>
+  <div>
+    <select formControlName="category">
+      <label for="">Select</label>
+        <option value="null">Selecione uma categoria</option>
+        <option value="Front End">Front End</option>
+        <option value="Back End">Back End</option>
+    </select>
+  </div>
+</form>
+
+<button (click)="onSubmit()">Salvar</button>
